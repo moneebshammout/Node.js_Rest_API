@@ -1,0 +1,14 @@
+{"level":"error","message":"This is bad request"}
+{"level":"error","message":"something wrong something wrong","stack":"Error: something wrong\n    at Object.<anonymous> (/home/moneeb/Desktop/react-projects/movies-project/server/server.js:13:7)\n    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47"}
+{"level":"error","message":"something wrong something wrong","stack":"Error: something wrong\n    at Server.<anonymous> (/home/moneeb/Desktop/react-projects/movies-project/server/server.js:22:9)\n    at Object.onceWrapper (node:events:641:28)\n    at Server.emit (node:events:527:28)\n    at emitListeningNT (node:net:1406:10)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)"}
+{"level":"error","message":"moee moee","stack":"Error: moee\n    at Server.<anonymous> (/home/moneeb/Desktop/react-projects/movies-project/server/server.js:22:9)\n    at Object.onceWrapper (node:events:641:28)\n    at Server.emit (node:events:527:28)\n    at emitListeningNT (node:net:1406:10)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)"}
+{"level":"error","message":"This is bad request"}
+{"level":"error","message":"This is bad request"}
+{"level":"error","message":"This is bad request"}
+{"level":"error","message":"This is bad request"}
+{"level":"error","message":"fetch is not defined"}
+{"level":"error","message":"fetch is not defined"}
+{"level":"error","message":"fetch is not defined"}
+{"level":"error","message":"fetch is not defined"}
+{"level":"error","message":"column \"createdAt\" of relation \"Movies\" does not exist"}
+{"level":"error","message":"column \"createdAt\" of relation \"Movies\" does not exist"}

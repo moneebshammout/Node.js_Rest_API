@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "make-model": "npx sequelize-cli model:generate $NAME",
+    "make-seed": "npx sequelize-cli seed:generate --name $NAME",
+    "seed": "npx sequelize-cli db:seed:all",
+    "migrate": "npx sequelize-cli db:migrate",
+    "undo-migrate": "npx sequelize-cli db: migrate:undo"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -14,21 +19,25 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-async-errors": "^3.1.1",
+    "express-async-handler": "^1.2.0",
+    "express-async-router": "^0.1.15",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "joi": "^17.6.0",
     "morgan": "~1.9.1",
     "node-fetch": "^3.2.10",
     "node-fetch-commonjs": "^3.1.1",
     "nodemon": "^2.0.19",
     "pg": "^8.7.3",
     "sequelize": "^6.21.3",
-    "sequelize-joi": "^2.0.1"
+    "sexy-require": "^1.1.2",
+    "winston": "^3.8.1"
   },
   "devDependencies": {
     "@types/node": "^18.7.1",
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "sequelize-cli": "^6.4.1"
   }
 }
