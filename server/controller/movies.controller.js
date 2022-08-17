@@ -1,46 +1,95 @@
-const fetch = require('node-fetch-commonjs');
-const { Movie } = require('../database/models/index');
-const BadRequest = require('../errors/bad-request');
+/* eslint-disable camelcase */
 
-const moviesAPI =
-  'https://api.themoviedb.org/3/discover/movie/?api_key=1ed03abf259db3275f034b5a5abe9f9e&language=en-US';
+const { requestValidator } = require('../utilities/methods');
+const api = require('./api');
 
 /**
- * Creates a list of movies in the database.
+ * Fetches a page of movies from the database.
  *
- * @param {import('express').Request} req
- * @param {import('express').Response} res
- */
-exports.createPage = async (req, res) => {
-  const { page } = req.body;
-  if (page === undefined) {
-    throw new BadRequest('no page provided');
-  }
-  const response = await fetch(
-    `${moviesAPI}&sort_by=popularity.desc&page=${page}`,
-  );
-  const jsonData = await response.json();
-  const movies = jsonData.results;
-  const responseBulk = await Movie.bulkCreate(movies);
-  res.send(responseBulk);
-};
-
-/**
- * Fetches a list of movies from the database.
- *
- * @param {Object} req  Request object.
- * @param {Object} res Response object.
+ * @param {import('express').Request} req Request Object.
+ * @param {import('express').Response} res Response Object.
  */
 exports.getOnePage = async (req, res) => {
   const { page, sortBy } = req.params;
-  const sortList = sortBy.split('.');
+  requestValidator({ page, sortBy });
 
-  const response = await Movie.findAll({
+  const jsonData = await api.getAll('Movie', {
     offset: (page - 1) * 20,
     limit: 20,
     raw: true,
-    order: [[sortList[0], sortList[1].toUpperCase()]],
+    order: [sortBy.split('.')],
   });
-  const dataJson = JSON.stringify(response, null, 2);
-  res.send(dataJson);
+
+  res.send(jsonData);
+};
+
+/**
+ * Create a movie in the database.
+ *
+ * @param {import('express').Request} req Request Object.
+ * @param {import('express').Response} res Response Object.
+ */
+exports.createMovie = async (req, res) => {
+  const {
+    id,
+    overview,
+    popularity,
+    poster_path,
+    release_date,
+    title,
+    vote_average,
+    createdAt,
+    updatedAt,
+  } = req.body;
+
+  const requestData = {
+    id: parseInt(id, 10),
+    overview,
+    popularity: parseFloat(popularity),
+    poster_path,
+    release_date,
+    title,
+    vote_average: parseFloat(vote_average),
+    createdAt: Date.parse(createdAt),
+    updatedAt: Date.parse(updatedAt),
+  };
+
+  requestValidator(requestData);
+  const jsonData = await api.createOne('Movie', requestData);
+
+  res.send(jsonData);
+};
+
+/**
+ * Update a movie in the database.
+ *
+ * @param {import('express').Request} req Request Object.
+ * @param {import('express').Response} res Response Object.
+ */
+exports.updateMovie = async (req, res) => {
+  const { id, attribute, value } = req.body;
+  requestValidator({ id, attribute, value });
+
+  const jsonData = await api.update(
+    'Movie',
+    { [attribute]: value },
+    { where: { id } },
+  );
+  res.send(jsonData);
+};
+
+/**
+ * Delete  movies from the database.
+ *
+ * @param {import('express').Request} req Request Object.
+ * @param {import('express').Response} res Response Object.
+ */
+exports.deleteMovie = async (req, res) => {
+  const { attribute, value } = req.body;
+  requestValidator({ attribute, value });
+
+  const jsonData = await api.destroy('Movie', {
+    where: { [attribute]: value },
+  });
+  res.send(jsonData);
 };

@@ -9,27 +9,7 @@ module.exports = (sequelize) => {
         allowNull: false,
         primaryKey: true,
       },
-      adult: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-      },
       title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      backdrop_path: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      genre_ids: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER),
-        allowNull: false,
-      },
-      original_language: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      original_title: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -49,18 +29,17 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      video: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-      },
-
       vote_average: {
         type: DataTypes.DOUBLE,
         allowNull: false,
       },
-      vote_count: {
-        type: DataTypes.INTEGER,
+      createdAt: {
         allowNull: false,
+        type: DataTypes.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
       },
     },
     {

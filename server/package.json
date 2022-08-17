@@ -8,8 +8,8 @@
     "make-model": "npx sequelize-cli model:generate $NAME",
     "make-seed": "npx sequelize-cli seed:generate --name $NAME",
     "seed": "npx sequelize-cli db:seed:all",
-    "migrate": "npx sequelize-cli db:migrate",
-    "undo-migrate": "npx sequelize-cli db: migrate:undo"
+    "migrate": "npx sequelize-cli  db:migrate",
+    "undo-migrate": "npx sequelize-cli db:migrate:undo"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

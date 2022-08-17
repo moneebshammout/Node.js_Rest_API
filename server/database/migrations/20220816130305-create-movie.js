@@ -6,27 +6,7 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
       },
-      adult: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-      },
       title: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      backdrop_path: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      genre_ids: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER),
-        allowNull: false,
-      },
-      original_language: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      original_title: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -46,17 +26,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      video: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-      },
-
       vote_average: {
         type: Sequelize.DOUBLE,
-        allowNull: false,
-      },
-      vote_count: {
-        type: Sequelize.INTEGER,
         allowNull: false,
       },
       createdAt: {
@@ -69,6 +40,7 @@ module.exports = {
       },
     });
   },
+
   async down(queryInterface) {
     await queryInterface.dropTable('Movies');
   },

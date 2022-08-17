@@ -2,7 +2,7 @@ require('express-async-errors');
 const express = require('express');
 const cors = require('cors');
 const winston = require('winston');
-const errorSubscriber = require('./errors/error-subscriber');
+const errorSubscriber = require('./utilities/error-subscriber');
 const errorHandler = require('./middleware/error-handler');
 const moviesRouter = require('./routes/movies');
 
