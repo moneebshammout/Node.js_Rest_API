@@ -123,3 +123,27 @@
 {"level":"error","message":"Unexpected token \" in JSON at position 0"}
 {"level":"error","message":"invalid input syntax for type integer: \" 2,\""}
 {"level":"error","message":"PARAMETER attribute IS MISSING"}
+{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
+{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
+{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
+{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":""}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":"notNull Violation: User.password cannot be null,\nnotNull Violation: User.salt cannot be null"}
+{"level":"error","message":"relation \"Users\" does not exist"}
+{"level":"error","message":"relation \"Users\" does not exist"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'create')"}
+{"level":"error","message":"relation \"Users\" does not exist"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"toJson is not a function"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":"Deletion Failed"}
+{"level":"error","message":"PASSWORD INCORRECT"}
+{"level":"error","message":"Cannot read properties of null (reading 'password')"}
+{"level":"error","message":"USER NOT FOUND"}

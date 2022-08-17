@@ -5,6 +5,7 @@ const winston = require('winston');
 const errorSubscriber = require('./utilities/error-subscriber');
 const errorHandler = require('./middleware/error-handler');
 const moviesRouter = require('./routes/movies');
+const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/movies', moviesRouter);
+app.use('/users', usersRouter);
 
 app.use(errorHandler);
 

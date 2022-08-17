@@ -3,7 +3,6 @@ module.exports = {
     await queryInterface.createTable('Movies', {
       id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         primaryKey: true,
       },
       title: {

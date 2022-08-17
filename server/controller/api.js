@@ -1,5 +1,4 @@
 const { sequelize } = require('../database/models/index');
-const { toJson } = require('../utilities/methods');
 
 /**
  * Get all records from a table in database.
@@ -11,7 +10,20 @@ const { toJson } = require('../utilities/methods');
  */
 const getAll = async (tableName, attributes) => {
   const response = await sequelize.models[tableName].findAll(attributes);
-  return toJson(response);
+  return response;
+};
+
+/**
+ * Get one record from a table in database.
+ *
+ * @param {string} tableName Sequelize model name.
+ * @param {object} attributes Attributes to be sent.
+ *
+ * @return {Object<string>} JSON response.
+ */
+const getOne = async (tableName, attributes) => {
+  const response = await sequelize.models[tableName].findOne(attributes);
+  return response;
 };
 
 /**
@@ -24,7 +36,7 @@ const getAll = async (tableName, attributes) => {
  */
 const createOne = async (tableName, data) => {
   const response = await sequelize.models[tableName].create(data);
-  return toJson(response);
+  return response;
 };
 
 /**
@@ -41,7 +53,7 @@ const update = async (tableName, updatedData, whereOption) => {
     updatedData,
     whereOption,
   );
-  return toJson(response);
+  return response;
 };
 
 /**
@@ -54,7 +66,7 @@ const update = async (tableName, updatedData, whereOption) => {
  */
 const destroy = async (tableName, whereOption) => {
   const response = await sequelize.models[tableName].destroy(whereOption);
-  return toJson(response);
+  return response;
 };
 
 module.exports = {
@@ -62,4 +74,5 @@ module.exports = {
   update,
   createOne,
   destroy,
+  getOne,
 };

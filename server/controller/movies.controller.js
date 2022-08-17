@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 
-const { requestValidator } = require('../utilities/methods');
+const { requestValidator, responseValidator } = require('../utilities/methods');
 const api = require('./api');
 
 /**
@@ -13,14 +13,14 @@ exports.getOnePage = async (req, res) => {
   const { page, sortBy } = req.params;
   requestValidator({ page, sortBy });
 
-  const jsonData = await api.getAll('Movie', {
+  const result = await api.getAll('Movie', {
     offset: (page - 1) * 20,
     limit: 20,
-    raw: true,
     order: [sortBy.split('.')],
+    raw: true,
   });
 
-  res.send(jsonData);
+  res.send(result);
 };
 
 /**
@@ -55,9 +55,9 @@ exports.createMovie = async (req, res) => {
   };
 
   requestValidator(requestData);
-  const jsonData = await api.createOne('Movie', requestData);
+  await api.createOne('Movie', requestData);
 
-  res.send(jsonData);
+  res.send('Movie Created');
 };
 
 /**
@@ -70,12 +70,14 @@ exports.updateMovie = async (req, res) => {
   const { id, attribute, value } = req.body;
   requestValidator({ id, attribute, value });
 
-  const jsonData = await api.update(
+  const result = await api.update(
     'Movie',
     { [attribute]: value },
     { where: { id } },
   );
-  res.send(jsonData);
+
+  responseValidator(result, 'Update Failed');
+  res.send('Movie updated');
 };
 
 /**
@@ -88,8 +90,9 @@ exports.deleteMovie = async (req, res) => {
   const { attribute, value } = req.body;
   requestValidator({ attribute, value });
 
-  const jsonData = await api.destroy('Movie', {
+  const result = await api.destroy('Movie', {
     where: { [attribute]: value },
   });
-  res.send(jsonData);
+  responseValidator(result, 'Deletion Failed');
+  res.send('Movie Deleted');
 };
