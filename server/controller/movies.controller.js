@@ -20,6 +20,7 @@ exports.getOnePage = async (req, res) => {
     raw: true,
   });
 
+  responseValidator(result, 'NO MOVIES FOUND');
   res.send(result);
 };
 
@@ -81,7 +82,7 @@ exports.updateMovie = async (req, res) => {
 };
 
 /**
- * Delete  movies from the database.
+ * Delete movies from the database.
  *
  * @param {import('express').Request} req Request Object.
  * @param {import('express').Response} res Response Object.
@@ -93,6 +94,7 @@ exports.deleteMovie = async (req, res) => {
   const result = await api.destroy('Movie', {
     where: { [attribute]: value },
   });
+
   responseValidator(result, 'Deletion Failed');
   res.send('Movie Deleted');
 };

@@ -9,7 +9,8 @@
     "make-seed": "npx sequelize-cli seed:generate --name $NAME",
     "seed": "npx sequelize-cli db:seed:all",
     "migrate": "npx sequelize-cli  db:migrate",
-    "undo-migrate": "npx sequelize-cli db:migrate:undo"
+    "undo-migrate": "npx sequelize-cli db:migrate:undo",
+    "test": " NODE_ENV=test jest --watchAll"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -24,8 +25,10 @@
     "express-async-router": "^0.1.15",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "jest": "^28.1.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
+    "mysql2": "^2.3.3",
     "node-fetch": "^3.2.10",
     "node-fetch-commonjs": "^3.1.1",
     "nodemon": "^2.0.19",
@@ -39,6 +42,8 @@
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "sequelize-cli": "^6.4.1"
+    "mocha": "^10.0.0",
+    "sequelize-cli": "^6.4.1",
+    "supertest": "^6.2.4"
   }
 }

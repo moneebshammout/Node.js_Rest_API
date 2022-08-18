@@ -1,149 +1,60 @@
-{"level":"error","message":"This is bad request"}
-{"level":"error","message":"something wrong something wrong","stack":"Error: something wrong\n    at Object.<anonymous> (/home/moneeb/Desktop/react-projects/movies-project/server/server.js:13:7)\n    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47"}
-{"level":"error","message":"something wrong something wrong","stack":"Error: something wrong\n    at Server.<anonymous> (/home/moneeb/Desktop/react-projects/movies-project/server/server.js:22:9)\n    at Object.onceWrapper (node:events:641:28)\n    at Server.emit (node:events:527:28)\n    at emitListeningNT (node:net:1406:10)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)"}
-{"level":"error","message":"moee moee","stack":"Error: moee\n    at Server.<anonymous> (/home/moneeb/Desktop/react-projects/movies-project/server/server.js:22:9)\n    at Object.onceWrapper (node:events:641:28)\n    at Server.emit (node:events:527:28)\n    at emitListeningNT (node:net:1406:10)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)"}
-{"level":"error","message":"This is bad request"}
-{"level":"error","message":"This is bad request"}
-{"level":"error","message":"This is bad request"}
-{"level":"error","message":"This is bad request"}
-{"level":"error","message":"fetch is not defined"}
-{"level":"error","message":"fetch is not defined"}
-{"level":"error","message":"fetch is not defined"}
-{"level":"error","message":"fetch is not defined"}
-{"level":"error","message":"column \"createdAt\" of relation \"Movies\" does not exist"}
-{"level":"error","message":"column \"createdAt\" of relation \"Movies\" does not exist"}
-{"level":"error","message":"PARAMETER undefined IS MISSING"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'toUpperCase')"}
-{"level":"error","message":"PARAMETER undefined IS MISSING"}
-{"level":"error","message":"PARAMETER undefined IS MISSING"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'toString')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'toString')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'toString')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'toString')"}
-{"level":"error","message":"PARAMETER undefined IS MISSING"}
-{"level":"error","message":"PARAMETER undefined IS MISSING"}
-{"level":"error","message":"PARAMETER undefined IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"Cannot destructure property 'page' of 'req.data' as it is undefined."}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"Cannot destructure property 'page' of 'req.data' as it is undefined."}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"PARAMETER page IS MISSING"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"getAll is not a function"}
-{"level":"error","message":"getAll is not a function"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'findAll')"}
-{"level":"error","message":"Expected plain object, array or sequelize method in the options.where parameter"}
-{"level":"error","message":"notNull Violation: Movie.id cannot be null,\nnotNull Violation: Movie.adult cannot be null,\nnotNull Violation: Movie.title cannot be null,\nnotNull Violation: Movie.backdrop_path cannot be null,\nnotNull Violation: Movie.genre_ids cannot be null,\nnotNull Violation: Movie.original_language cannot be null,\nnotNull Violation: Movie.original_title cannot be null,\nnotNull Violation: Movie.overview cannot be null,\nnotNull Violation: Movie.popularity cannot be null,\nnotNull Violation: Movie.poster_path cannot be null,\nnotNull Violation: Movie.release_date cannot be null,\nnotNull Violation: Movie.video cannot be null,\nnotNull Violation: Movie.vote_average cannot be null,\nnotNull Violation: Movie.vote_count cannot be null"}
-{"level":"error","message":"notNull Violation: Movie.id cannot be null,\nnotNull Violation: Movie.adult cannot be null,\nnotNull Violation: Movie.title cannot be null,\nnotNull Violation: Movie.backdrop_path cannot be null,\nnotNull Violation: Movie.genre_ids cannot be null,\nnotNull Violation: Movie.original_language cannot be null,\nnotNull Violation: Movie.original_title cannot be null,\nnotNull Violation: Movie.overview cannot be null,\nnotNull Violation: Movie.popularity cannot be null,\nnotNull Violation: Movie.poster_path cannot be null,\nnotNull Violation: Movie.release_date cannot be null,\nnotNull Violation: Movie.video cannot be null,\nnotNull Violation: Movie.vote_average cannot be null,\nnotNull Violation: Movie.vote_count cannot be null"}
-{"level":"error","message":"adult is not defined"}
-{"level":"error","message":"Unexpected token m in JSON at position 0"}
-{"level":"error","message":"Unexpected token m in JSON at position 0"}
-{"level":"error","message":"Unexpected token m in JSON at position 0"}
-{"level":"error","message":"Unexpected token \" in JSON at position 0"}
-{"level":"error","message":"Unexpected token \" in JSON at position 0"}
-{"level":"error","message":"invalid input syntax for type integer: \" 2,\""}
-{"level":"error","message":"PARAMETER attribute IS MISSING"}
-{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
-{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
-{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
-{"level":"error","message":"invalid input syntax for type timestamp with time zone: \"Invalid date\""}
 {"level":"error","message":"Validation error"}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":""}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":"notNull Violation: User.password cannot be null,\nnotNull Violation: User.salt cannot be null"}
-{"level":"error","message":"relation \"Users\" does not exist"}
-{"level":"error","message":"relation \"Users\" does not exist"}
-{"level":"error","message":"Cannot read properties of undefined (reading 'create')"}
-{"level":"error","message":"relation \"Users\" does not exist"}
+{"level":"error","message":"Class constructor BadRequest cannot be invoked without 'new'"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Unexpected token r in JSON at position 6"}
+{"level":"error","message":"Unexpected token r in JSON at position 6"}
+{"level":"error","message":"Unexpected token r in JSON at position 6"}
+{"level":"error","message":"Unexpected token r in JSON at position 6"}
+{"level":"error","message":"Unexpected token r in JSON at position 6"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"jwt malformed"}
+{"level":"error","message":"jwt malformed"}
+{"level":"error","message":"jwt malformed"}
+{"level":"error","message":"jwt malformed"}
+{"level":"error","message":"jwt malformed"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
 {"level":"error","message":"Validation error"}
-{"level":"error","message":"toJson is not a function"}
+{"level":"error","message":"Validation error: Validation isEmail on email failed"}
+{"level":"error","message":"Connection terminated unexpectedly"}
+{"level":"error","message":"Connection terminated unexpectedly"}
+{"level":"error","message":"Connection terminated unexpectedly"}
+{"level":"error","message":"Connection terminated unexpectedly"}
+{"level":"error","message":"unsupported charset \"UTF-8\""}
+{"level":"error","message":"unsupported charset \"UTF-8\""}
+{"level":"error","message":"Connection terminated unexpectedly"}
+{"level":"error","message":"PARAMETER email IS MISSING"}
+{"level":"error","message":"relation \"User\" does not exist"}
+{"level":"error","message":"relation \"User\" does not exist"}
 {"level":"error","message":"Validation error"}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":"Deletion Failed"}
-{"level":"error","message":"PASSWORD INCORRECT"}
-{"level":"error","message":"Cannot read properties of null (reading 'password')"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Validation error"}
 {"level":"error","message":"USER NOT FOUND"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"USER NOT FOUND"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"USER NOT FOUND"}
+{"level":"error","message":"relation \"Movies\" does not exist"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"USER NOT FOUND"}
+{"level":"error","message":"PASSWORD INCORRECT"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"USER NOT FOUND"}
+{"level":"error","message":"PASSWORD INCORRECT"}
+{"level":"error","message":"Access denied. No token provided"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"Validation error"}
+{"level":"error","message":"USER NOT FOUND"}
+{"level":"error","message":"PASSWORD INCORRECT"}
+{"level":"error","message":"Access denied. No token provided"}

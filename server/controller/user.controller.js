@@ -1,11 +1,9 @@
-const jwt = require('jsonwebtoken');
-const config = require('config');
-const BadRequest = require('../utilities/bad-request');
 const {
   requestValidator,
   responseValidator,
   hashPassword,
   checkPassword,
+  generateAuthToken,
 } = require('../utilities/methods');
 const api = require('./api');
 
@@ -18,16 +16,17 @@ const api = require('./api');
 exports.signUp = async (req, res) => {
   const { email, password } = req.body;
   requestValidator({ email, password });
-
   const { salt, hashedPassword } = await hashPassword(password);
-  const result = await api.createOne('User', {
+
+  const user = await api.createOne('User', {
     email,
     salt,
     password: hashedPassword,
   });
 
-  responseValidator(result, 'Signup Failed');
-  res.send(result);
+  responseValidator(user, 'Signup Failed');
+  const token = generateAuthToken('jwtPrivateKey', { _id: user.id });
+  res.header('x-auth-token', token).send(user);
 };
 
 /**
@@ -45,12 +44,8 @@ exports.signIn = async (req, res) => {
     raw: true,
   });
 
-  if (user === null) {
-    throw new BadRequest('USER NOT FOUND');
-  }
-
+  responseValidator(user, 'USER NOT FOUND');
   await checkPassword(password, user.password);
-  const token = jwt.sign({ _id: user.id }, config.get('jwtPrivateKey'));
-  // responseValidator(result, 'Signup Failed');
-  res.send(token);
+  const token = generateAuthToken('jwtPrivateKey', { _id: user.id });
+  res.header('x-auth-token', token).send(user);
 };

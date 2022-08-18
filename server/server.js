@@ -22,9 +22,5 @@ app.use('/users', usersRouter);
 
 app.use(errorHandler);
 
-// app.get('/', async (req, res) => {
-
-// });
-app.listen(3000, () => {
-  console.log('Server started port:3000');
-});
+app.listen(3000, () => {});
+module.exports = app;

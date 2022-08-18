@@ -36,11 +36,11 @@ const getOne = async (tableName, attributes) => {
  */
 const createOne = async (tableName, data) => {
   const response = await sequelize.models[tableName].create(data);
-  return response;
+  return JSON.stringify(response, null, 2);
 };
 
 /**
- * Update a single record in the database.
+ * Update records in the database.
  *
  * @param {string} tableName Sequelize model name.
  * @param {object} updatedData Data to be changed.

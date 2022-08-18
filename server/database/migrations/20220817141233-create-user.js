@@ -8,6 +8,9 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         primaryKey: true,
+        validate: {
+          isEmail: 'expample@example.com',
+        },
       },
       password: {
         type: Sequelize.TEXT,

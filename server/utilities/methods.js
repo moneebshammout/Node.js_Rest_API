@@ -1,4 +1,6 @@
 const bcrypt = require('bcrypt');
+const config = require('config');
+const jwt = require('jsonwebtoken');
 const BadRequest = require('./bad-request');
 
 /**
@@ -9,6 +11,7 @@ const BadRequest = require('./bad-request');
 const requestValidator = (params) => {
   Object.keys(params).forEach((param) => {
     const value = params[param];
+
     if (value === undefined || value === null) {
       throw new BadRequest(`PARAMETER ${param} IS MISSING`);
     }
@@ -38,6 +41,7 @@ const hashPassword = async (password) => {
   if (password.length < 8) {
     throw new BadRequest('MINIMUM PASSWORD 8 CHARACTERS');
   }
+
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -52,12 +56,8 @@ const hashPassword = async (password) => {
  *
  * @param {string} password Password to be hashed.
  * @param {string} hashedPassword Password stored in the database.
- *
  */
 const checkPassword = async (password, hashedPassword) => {
-  if (password.length < 8) {
-    throw new BadRequest('MINIMUM PASSWORD 8 CHARACTERS');
-  }
   const valid = await bcrypt.compare(password, hashedPassword);
 
   if (!valid) {
@@ -65,9 +65,26 @@ const checkPassword = async (password, hashedPassword) => {
   }
 };
 
+/**
+ * Generates JWT token.
+ *
+ * @param {string} privateKey Name of private key.
+ * @param {Object} credentials Credentials to sign for JWT.
+ *
+ * @return {string} Token.
+ */
+const generateAuthToken = (privateKey, credentials) => {
+  if (!config.has(privateKey)) {
+    throw new BadRequest('NO JWT PRIVATE KEY');
+  }
+
+  return jwt.sign(credentials, config.get(privateKey));
+};
+
 module.exports = {
   requestValidator,
   checkPassword,
   responseValidator,
   hashPassword,
+  generateAuthToken,
 };
