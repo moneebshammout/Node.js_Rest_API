@@ -1,4 +1,5 @@
 const winston = require('winston');
+
 /**
  * Subscribes to unhandled errors that occurs outside APIs and logs it when it occurs.
  *
