@@ -2,25 +2,22 @@
 const supertest = require('supertest');
 const app = require('../server');
 
+const user1 = {
+  email: 'moneeb@gmail22.com',
+  password: 'moneeb123',
+};
+
 describe('/users', () => {
   describe('POST /signUp', () => {
     it('should succeed', async () => {
-      const res = await supertest(app).post('/users/signUp').send({
-        email: 'moneeb@gmail22.com',
-        password: 'moneeb123',
-      });
-
+      const res = await supertest(app).post('/users/signUp').send(user1);
       expect(res.status).toBe(200);
     });
   });
 
   describe('POST /signUp ', () => {
     it('should fail user already exist', async () => {
-      const res = await supertest(app).post('/users/signUp').send({
-        email: 'moneeb@gmail22.com',
-        password: 'moneeb123',
-      });
-
+      const res = await supertest(app).post('/users/signUp').send(user1);
       expect(res.status).toBe(400);
     });
   });
@@ -38,10 +35,7 @@ describe('/users', () => {
 
   describe('POST /signIn ', () => {
     it('should succeed', async () => {
-      const res = await supertest(app).post('/users/signIn').send({
-        email: 'moneeb@gmail22.com',
-        password: 'moneeb123',
-      });
+      const res = await supertest(app).post('/users/signIn').send(user1);
 
       expect(res.status).toBe(200);
       return res;

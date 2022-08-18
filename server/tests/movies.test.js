@@ -3,6 +3,21 @@ const supertest = require('supertest');
 const app = require('../server');
 const db = require('../database/models/index');
 
+const movie1 = {
+  id: 1,
+  overview: 'dummy movie',
+  popularity: 1370.175,
+  poster_path: 'dummy Poster',
+  release_date: '2022-07-29',
+  title: 'Purple Hearts',
+  vote_average: 8.6,
+  createdAt: new Date(),
+  updatedAt: new Date(),
+};
+
+const token1 =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjA4MTYxNzl9.iuWD9fHtFhGdv0am-25KsBFrWxzsWBN8X_Kxb18mehg';
+
 describe('/movies', () => {
   beforeAll(async () => {
     await db.sequelize.sync({ force: true });
@@ -20,37 +35,16 @@ describe('/movies', () => {
       const res = await supertest(app)
         .post('/movies')
         .set({
-          'x-auth-token':
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjA4MTYxNzl9.iuWD9fHtFhGdv0am-25KsBFrWxzsWBN8X_Kxb18mehg',
+          'x-auth-token': token1,
         })
-        .send({
-          id: 1,
-          overview: 'dummy movie',
-          popularity: 1370.175,
-          poster_path: 'dummy Poster',
-          release_date: '2022-07-29',
-          title: 'Purple Hearts',
-          vote_average: 8.6,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        });
+        .send(movie1);
       expect(res.status).toBe(200);
     });
   });
 
   describe('POST /movies ', () => {
     it('should fail access denied', async () => {
-      const res = await supertest(app).post('/movies').send({
-        id: 1,
-        overview: 'dummy movie',
-        popularity: 1370.175,
-        poster_path: 'dummy Poster',
-        release_date: '2022-07-29',
-        title: 'Purple Hearts',
-        vote_average: 8.6,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      });
+      const res = await supertest(app).post('/movies').send(movie1);
       expect(res.status).toBe(401);
     });
   });
