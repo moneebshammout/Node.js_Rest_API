@@ -1,0 +1,5 @@
+// TODO:DELETE ME
+
+// base model inherits from model sequelize.
+
+// reuse pagination.
