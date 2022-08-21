@@ -10,8 +10,8 @@ const api = require('./api');
 /**
  * Sign up user.
  *
- * @param {import('express').Request} req Request Object.
- * @param {import('express').Response} res Response Object.
+ * @param {import('express').Request} req Request object.
+ * @param {import('express').Response} res Response object.
  */
 exports.signUp = async (req, res) => {
   const { email, password } = req.body;
@@ -32,8 +32,8 @@ exports.signUp = async (req, res) => {
 /**
  * Sign in user.
  *
- * @param {import('express').Request} req Request Object.
- * @param {import('express').Response} res Response Object.
+ * @param {import('express').Request} req Request object.
+ * @param {import('express').Response} res Response object.
  */
 exports.signIn = async (req, res) => {
   const { email, password } = req.body;

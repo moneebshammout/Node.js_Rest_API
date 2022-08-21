@@ -6,7 +6,7 @@ const { sequelize } = require('../database/models/index');
  * @param {string} tableName Sequelize model name.
  * @param {object} attributes Attributes to be sent.
  *
- * @return {Object<string>} JSON response.
+ * @return {object.<string>} JSON response.
  */
 const getAll = async (tableName, attributes) => {
   const response = await sequelize.models[tableName].findAll(attributes);
@@ -19,7 +19,7 @@ const getAll = async (tableName, attributes) => {
  * @param {string} tableName Sequelize model name.
  * @param {object} attributes Attributes to be sent.
  *
- * @return {Object<string>} JSON response.
+ * @return {object.<string>} JSON response.
  */
 const getOne = async (tableName, attributes) => {
   const response = await sequelize.models[tableName].findOne(attributes);
@@ -32,7 +32,7 @@ const getOne = async (tableName, attributes) => {
  * @param {string} tableName Sequelize model name.
  * @param {object} data Record Data.
  *
- * @return {Object<string>} JSON response.
+ * @return {object.<string>} JSON response.
  */
 const createOne = async (tableName, data) => {
   const response = await sequelize.models[tableName].create(data);
@@ -46,7 +46,7 @@ const createOne = async (tableName, data) => {
  * @param {object} updatedData Data to be changed.
  * @param {object} whereOption Condition to change for.
  *
- * @return {Object<string>} JSON response.
+ * @return {object.<string>} JSON response.
  */
 const update = async (tableName, updatedData, whereOption) => {
   const response = await sequelize.models[tableName].update(
@@ -62,7 +62,7 @@ const update = async (tableName, updatedData, whereOption) => {
  * @param {string} tableName Sequelize model name.
  * @param {object} whereOption Condition for deleting rows.
  *
- * @return {Object<string>} JSON response.
+ * @return {object.<string>} JSON response.
  */
 const destroy = async (tableName, whereOption) => {
   const response = await sequelize.models[tableName].destroy(whereOption);

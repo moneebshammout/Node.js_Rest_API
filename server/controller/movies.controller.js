@@ -6,8 +6,8 @@ const api = require('./api');
 /**
  * Fetches a page of movies from the database.
  *
- * @param {import('express').Request} req Request Object.
- * @param {import('express').Response} res Response Object.
+ * @param {import('express').Request} req Request object.
+ * @param {import('express').Response} res Response object.
  */
 exports.getOnePage = async (req, res) => {
   const { page, sortBy } = req.params;
@@ -27,8 +27,8 @@ exports.getOnePage = async (req, res) => {
 /**
  * Create a movie in the database.
  *
- * @param {import('express').Request} req Request Object.
- * @param {import('express').Response} res Response Object.
+ * @param {import('express').Request} req Request object.
+ * @param {import('express').Response} res Response object.
  */
 exports.createMovie = async (req, res) => {
   const {
@@ -64,8 +64,8 @@ exports.createMovie = async (req, res) => {
 /**
  * Update a movie in the database.
  *
- * @param {import('express').Request} req Request Object.
- * @param {import('express').Response} res Response Object.
+ * @param {import('express').Request} req Request object.
+ * @param {import('express').Response} res Response object.
  */
 exports.updateMovie = async (req, res) => {
   const { id, attribute, value } = req.body;
@@ -84,8 +84,8 @@ exports.updateMovie = async (req, res) => {
 /**
  * Delete movies from the database.
  *
- * @param {import('express').Request} req Request Object.
- * @param {import('express').Response} res Response Object.
+ * @param {import('express').Request} req Request object.
+ * @param {import('express').Response} res Response object.
  */
 exports.deleteMovie = async (req, res) => {
   const { attribute, value } = req.body;

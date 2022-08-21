@@ -6,7 +6,7 @@ const BadRequest = require('./bad-request');
 /**
  * Validate request parameters.
  *
- * @param {Object} params Object of parameters to check.
+ * @param {object} params Object of parameters to check.
  */
 const requestValidator = (params) => {
   Object.keys(params).forEach((param) => {
@@ -21,7 +21,7 @@ const requestValidator = (params) => {
 /**
  * Validate response object.
  *
- * @param {Object} response Object of parameters to check.
+ * @param {object} response Object of parameters to check.
  * @param {string} description Error description.
  */
 const responseValidator = (response, description) => {
@@ -35,7 +35,7 @@ const responseValidator = (response, description) => {
  *
  * @param {string} password Password to be hashed.
  *
- * @return {Object<string>} Salt and hashed password.
+ * @return {object.<string>} Salt and hashed password.
  */
 const hashPassword = async (password) => {
   if (password.length < 8) {
@@ -69,7 +69,7 @@ const checkPassword = async (password, hashedPassword) => {
  * Generates JWT token.
  *
  * @param {string} privateKey Name of private key.
- * @param {Object} credentials Credentials to sign for JWT.
+ * @param {object} credentials Credentials to sign for JWT.
  *
  * @return {string} Token.
  */
