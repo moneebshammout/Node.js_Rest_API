@@ -1,5 +1,8 @@
 const { Model } = require('sequelize');
 
+/**
+ * Over riding model class to add custom methods.
+ */
 class BaseModel extends Model {
   /**
    * Get all records from a table in database.
