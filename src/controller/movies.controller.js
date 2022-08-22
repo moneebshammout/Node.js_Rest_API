@@ -2,7 +2,7 @@ const { responseValidator } = require('../utilities/methods');
 const { Movie } = require('../models/index');
 
 /**
- * Fetches a page of movies from the database.
+ * Fetch a page of movies from the database.
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
@@ -11,7 +11,7 @@ const { Movie } = require('../models/index');
  */
 exports.getOnePage = async (req, res) => {
   const { page, sortBy } = req.query;
-  const result = await Movie.getOnePage([sortBy.split('.')], 20, page);
+  const result = await Movie.getOnePage([sortBy.split('.')], page);
   responseValidator(result, 'NO MOVIES FOUND');
   res.send(result);
 };

@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const supertest = require('supertest');
 const app = require('../server');
-const db = require('../models/index');
+const { sequelize } = require('../models/index');
 
 const movie1 = {
   id: 1,
@@ -18,7 +18,7 @@ const token1 =
 
 describe('/movies', () => {
   beforeAll(async () => {
-    await db.sequelize.sync({ force: true });
+    await sequelize.sync({ force: true });
   });
 
   describe('Get /movies/page&:sortBy', () => {

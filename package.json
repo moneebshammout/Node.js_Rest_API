@@ -10,7 +10,7 @@
     "seed": "npx sequelize-cli db:seed:all",
     "migrate": "npx sequelize-cli  db:migrate",
     "undo-migrate": "npx sequelize-cli db:migrate:undo",
-    "test": " NODE_ENV=test jest --watchAll"
+    "test": " NODE_ENV=test jest -- $NAME"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

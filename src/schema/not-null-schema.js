@@ -1,7 +1,7 @@
 const { body, query } = require('express-validator');
 
 /**
- * Create array of validation chain fields.
+ * Create array of not null chain fields.
  *
  * @param {Array.<string>} attributeList List of attributes in schema.
  * @param {string} type Body or query parameters.

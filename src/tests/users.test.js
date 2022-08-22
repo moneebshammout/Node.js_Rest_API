@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const supertest = require('supertest');
 const app = require('../server');
+const { sequelize } = require('../models/index');
 
 const user1 = {
   email: 'moneeb@gmail22.com',
@@ -9,7 +10,7 @@ const user1 = {
 
 describe('/users', () => {
   beforeAll(async () => {
-    await db.sequelize.sync({ force: true });
+    await sequelize.sync({ force: true });
   });
   describe('POST /signUp', () => {
     it('should succeed', async () => {

@@ -8,12 +8,12 @@ class BaseModel extends Model {
    * Get one page records from the database.
    *
    * @param {Array.<string>} order List of order by columns.
-   * @param {number} limit Max records per page.
    * @param {number} pageNumber
+   * @param {number} limit Max records per page.
    *
    * @return {object.<string>} JSON response.
    */
-  static async getOnePage(order, limit, pageNumber) {
+  static async getOnePage(order, pageNumber = 1, limit = 20) {
     const response = await this.findAll({
       offset: (pageNumber - 1) * limit,
       limit,
