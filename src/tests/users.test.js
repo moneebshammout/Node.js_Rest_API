@@ -8,6 +8,9 @@ const user1 = {
 };
 
 describe('/users', () => {
+  beforeAll(async () => {
+    await db.sequelize.sync({ force: true });
+  });
   describe('POST /signUp', () => {
     it('should succeed', async () => {
       const res = await supertest(app).post('/users/signUp').send(user1);

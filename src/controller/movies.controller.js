@@ -80,7 +80,7 @@ exports.updateMovie = async (req, res) => {
 exports.deleteMovie = async (req, res) => {
   const { attribute, value } = req.body;
 
-  const result = await Movie.destroyRecord({
+  const result = await Movie.destroy({
     where: { [attribute]: value },
   });
 

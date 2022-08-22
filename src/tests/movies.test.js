@@ -7,12 +7,10 @@ const movie1 = {
   id: 1,
   overview: 'dummy movie',
   popularity: 1370.175,
-  poster_path: 'dummy Poster',
-  release_date: '2022-07-29',
+  posterPath: 'dummy Poster',
+  releaseDate: '2022-07-29',
   title: 'Purple Hearts',
-  vote_average: 8.6,
-  createdAt: new Date(),
-  updatedAt: new Date(),
+  voteAverage: 8.6,
 };
 
 const token1 =
@@ -23,9 +21,11 @@ describe('/movies', () => {
     await db.sequelize.sync({ force: true });
   });
 
-  describe('Get /movies/:page&:sortBy', () => {
+  describe('Get /movies/page&:sortBy', () => {
     it('should succeed', async () => {
-      const res = await supertest(app).get('/movies/1&popularity.desc');
+      const res = await supertest(app).get(
+        '/movies?page=1&sortBy=popularity.desc',
+      );
       expect(res.status).toBe(200);
     });
   });

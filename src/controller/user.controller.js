@@ -40,7 +40,7 @@ exports.signUp = async (req, res) => {
 exports.signIn = async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await User.getOne({
+  const user = await User.findOne({
     where: { email },
     raw: true,
   });
