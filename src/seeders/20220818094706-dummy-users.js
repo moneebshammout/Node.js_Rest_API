@@ -10,6 +10,8 @@ module.exports = {
           password:
             '$2b$10$/jVJcinpu.uZYFMTbPuaW./OE6X1wcpHOKbmOp2OhPA0CxG7tOf5e',
           salt: '$2b$10$/jVJcinpu.uZYFMTbPuaW.',
+          created_at: new Date(),
+          updated_at: new Date(),
         },
         {
           id: 2,
@@ -17,6 +19,8 @@ module.exports = {
           password:
             '$2b$10$I6fjryeZoMpbL6S5eHhm2OWADUNEzQmQbBReyUPKftIyGvkDaFDbe',
           salt: '$2b$10$I6fjryeZoMpbL6S5eHhm2O',
+          created_at: new Date(),
+          updated_at: new Date(),
         },
       ],
       {},

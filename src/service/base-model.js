@@ -20,8 +20,27 @@ class BaseModel extends Model {
    *
    * @return {object.<string>} JSON response.
    */
-  async getOne(attributes) {
+  static async getOne(attributes) {
     const response = await this.findOne(attributes);
+    return response;
+  }
+
+  /**
+   * Get one page  records from the database.
+   *
+   * @param {Array.<string>} order List of order by columns.
+   * @param {number} limit Max records per page.
+   * @param {number} pageNumber
+   *
+   * @return {object.<string>} JSON response.
+   */
+  static async getOnePage(order, limit, pageNumber) {
+    const response = await this.findAll({
+      offset: (pageNumber - 1) * limit,
+      limit,
+      order,
+      raw: true,
+    });
     return response;
   }
 

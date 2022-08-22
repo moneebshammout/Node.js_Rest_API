@@ -9,9 +9,10 @@ const { validationResult } = require('express-validator');
  */
 module.exports = (req, res, next) => {
   const errorsList = validationResult(req);
-  if (!errorsList.isEmpty()) {
-    res.status(400).json(errorsList.array());
-  } else {
-    next();
+
+  if (errorsList.isEmpty()) {
+    return next();
   }
+
+  return res.status(400).json(errorsList.array());
 };

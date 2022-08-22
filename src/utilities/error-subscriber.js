@@ -9,11 +9,13 @@ const { exec } = require('child_process');
 module.exports = (errorName) => {
   process.on(errorName, (ex) => {
     console.log(`RESTARTING ${errorName}:${ex}`);
+
     winston.error(ex.message, {
       action: 'restart',
       statusCode: 500,
       stack: ex.stack,
     });
+
     exec(`pm2 restart <${process.pid}>`);
   });
 };

@@ -22,17 +22,20 @@ module.exports = (sequelize) => {
         type: DataTypes.DOUBLE,
         allowNull: false,
       },
-      poster_path: {
+      posterPath: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: 'poster_path',
       },
-      release_date: {
+      releaseDate: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: 'release_date',
       },
-      vote_average: {
+      voteAverage: {
         type: DataTypes.DOUBLE,
         allowNull: false,
+        field: 'vote_average',
       },
       createdAt: {
         allowNull: false,

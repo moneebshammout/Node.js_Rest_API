@@ -4,7 +4,8 @@ const {
   checkPassword,
   generateAuthToken,
 } = require('../utilities/methods');
-const { user: User } = require('../models/index');
+const { User } = require('../models/index');
+
 /**
  * Sign up user.
  *

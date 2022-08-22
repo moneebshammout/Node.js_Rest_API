@@ -6,7 +6,7 @@ const BadRequest = require('./bad-request');
 /**
  * Validate response object.
  *
- * @param {object} response Object of parameters to check.
+ * @param {object} response Object to check.
  * @param {string} description Error description.
  */
 const responseValidator = (response, description) => {
@@ -39,7 +39,7 @@ const hashPassword = async (password) => {
 /**
  * Authenticates user by checking the password with the salt.
  *
- * @param {string} password Password to be hashed.
+ * @param {string} password Password to compare.
  * @param {string} hashedPassword Password stored in the database.
  */
 const checkPassword = async (password, hashedPassword) => {

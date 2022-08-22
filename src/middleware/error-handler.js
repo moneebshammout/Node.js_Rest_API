@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const winston = require('winston');
 
 /**
@@ -15,6 +16,4 @@ module.exports = (err, req, res, next) => {
     msg: err.message,
     success: false,
   });
-
-  next(err.message);
 };
