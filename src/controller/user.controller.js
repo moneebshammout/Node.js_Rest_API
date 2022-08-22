@@ -11,6 +11,8 @@ const { User } = require('../models/index');
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
+ * @param {string} req.body.email
+ * @param {string} req.body.password
  */
 exports.signUp = async (req, res) => {
   const { email, password } = req.body;
@@ -32,6 +34,8 @@ exports.signUp = async (req, res) => {
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
+ * @param {string} req.body.email
+ * @param {string} req.body.password
  */
 exports.signIn = async (req, res) => {
   const { email, password } = req.body;

@@ -29,7 +29,7 @@ class BaseModel extends Model {
   }
 
   /**
-   * Get one page  records from the database.
+   * Get one page records from the database.
    *
    * @param {Array.<string>} order List of order by columns.
    * @param {number} limit Max records per page.
@@ -84,4 +84,5 @@ class BaseModel extends Model {
     return response;
   }
 }
+
 module.exports = BaseModel;

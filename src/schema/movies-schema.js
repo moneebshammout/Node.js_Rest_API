@@ -12,8 +12,6 @@ module.exports = {
       'posterPath',
       'releaseDate',
       'voteAverage',
-      'createdAt',
-      'updatedAt',
     ],
     'body',
   ),
