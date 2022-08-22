@@ -6,13 +6,12 @@ const { Movie } = require('../models/index');
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
- * @param {string} req.query.page Page number to fetch.
- * @param {string} req.query.sortBy Order query.
  */
 exports.getOnePage = async (req, res) => {
   const { page, sortBy } = req.query;
   const result = await Movie.getOnePage([sortBy.split('.')], page);
   responseValidator(result, 'NO MOVIES FOUND');
+
   res.send(result);
 };
 
@@ -21,13 +20,6 @@ exports.getOnePage = async (req, res) => {
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
- * @param {string} req.body.id
- * @param {string} req.body.overview
- * @param {string} req.body.popularity
- * @param {string} req.body.posterPath Web image url.
- * @param {string} req.body.releaseDate
- * @param {string} req.body.title
- * @param {string} req.body.voteAverage
  */
 exports.createMovie = async (req, res) => {
   const {
@@ -58,14 +50,12 @@ exports.createMovie = async (req, res) => {
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
- * @param {string} req.body.id Movie id.
- * @param {string} req.body.attribute Movie column name.
- * @param {string} req.body.value Movie column new value.
  */
 exports.updateMovie = async (req, res) => {
   const { id, attribute, value } = req.body;
   const result = await Movie.update({ [attribute]: value }, { where: { id } });
   responseValidator(result, 'Update Failed');
+
   res.send('Movie updated');
 };
 
@@ -74,8 +64,6 @@ exports.updateMovie = async (req, res) => {
  *
  * @param {import('express').Request} req Request object.
  * @param {import('express').Response} res Response object.
- * @param {string} req.body.attribute Movie column name.
- * @param {string} req.body.value Movie value owner to be deleted.
  */
 exports.deleteMovie = async (req, res) => {
   const { attribute, value } = req.body;
@@ -85,5 +73,6 @@ exports.deleteMovie = async (req, res) => {
   });
 
   responseValidator(result, 'Deletion Failed');
+
   res.send('Movie Deleted');
 };

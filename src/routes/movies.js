@@ -1,12 +1,14 @@
 const { AsyncRouter } = require('express-async-router');
 const authHandler = require('../middleware/authentication');
 const schemaValidator = require('../middleware/schema-validator');
+
 const {
   getSchema,
   putSchema,
   postSchema,
   deleteSchema,
 } = require('../schema/movies-schema');
+
 const {
   getOnePage,
   updateMovie,

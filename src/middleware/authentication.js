@@ -18,5 +18,6 @@ module.exports = (req, res, next) => {
 
   const decodedToken = jwt.verify(token, config.get('jwtPrivateKey'));
   req.user = decodedToken;
+
   next();
 };

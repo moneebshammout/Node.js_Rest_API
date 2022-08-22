@@ -10,6 +10,7 @@ const { body, query } = require('express-validator');
  */
 module.exports = (attributeList, type) => {
   const chainType = type === 'body' ? body : query;
+
   return attributeList.map((attribute) =>
     chainType(attribute).exists({ checkFalsy: true }),
   );

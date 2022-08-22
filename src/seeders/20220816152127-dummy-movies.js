@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     await queryInterface.bulkInsert(
       'movie',
       [

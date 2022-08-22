@@ -1,6 +1,5 @@
 module.exports = {
-  // eslint-disable-next-line no-unused-vars
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     await queryInterface.bulkInsert(
       'user',
       [

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const supertest = require('supertest');
 const app = require('../server');
 const { sequelize } = require('../models/index');
@@ -12,6 +11,7 @@ describe('/users', () => {
   beforeAll(async () => {
     await sequelize.sync({ force: true });
   });
+
   describe('POST /signUp', () => {
     it('should succeed', async () => {
       const res = await supertest(app).post('/users/signUp').send(user1);
