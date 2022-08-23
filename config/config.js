@@ -1,9 +1,9 @@
 module.exports = {
   development: {
-    username: 'postmoneeb',
-    password: 'shammout123',
-    database: 'movies',
-    host: 'localhost',
+    username: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE,
+    host: process.env.PGHOST,
     dialect: 'postgres',
   },
   test: {

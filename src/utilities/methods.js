@@ -10,7 +10,7 @@ const BadRequest = require('./bad-request');
  * @param {string} description Error description.
  */
 const responseValidator = (response, description) => {
-  if (!response || response === null) {
+  if (!response || (Array.isArray(response) && !response[0])) {
     throw new BadRequest(description);
   }
 };

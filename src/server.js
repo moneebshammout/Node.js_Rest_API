@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(router);
 app.use(errorHandler);
 
-app.listen(3000, () => {});
+app.listen(3000, async () => {
+  console.log('Running on port 3000');
+});
 
 module.exports = app;
