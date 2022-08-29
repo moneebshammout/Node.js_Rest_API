@@ -2,10 +2,9 @@
  * Overriding Error class to handel api errors.
  */
 class BadRequest extends Error {
-  constructor(message, code, details) {
+  constructor(message, code) {
     super(message);
     this.statusCode = code ?? 400;
-    this.details = details;
   }
 }
 
